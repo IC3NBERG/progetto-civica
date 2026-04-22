@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justice in the Workplace | Filippo & Giorgio</title>
+    <meta name="description" content="A modern inclusion policy for tomorrow's workplace - Civic Education Project 2026">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 50 40" fill="none">
+                        <path d="M5 35 L5 30 L20 20 L20 5 L30 5 L30 20 L45 30 L45 35" stroke="#D69E2E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <circle cx="15" cy="30" r="4" fill="#38B2AC"/>
+                        <circle cx="35" cy="30" r="4" fill="#38B2AC"/>
+                    </svg>
+                </div>
+                <span class="logo-text">Justice in the Workplace</span>
+            </div>
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="it">IT</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+        
+        <!-- HOME PAGE -->
+        <div class="page active" data-page="home">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-bg">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80" alt="Diverse workplace team">
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#D69E2E"/></svg>
+                        <span data-i18n="hero.badge">Civic Education Project 2026</span>
+                    </div>
+                    <h1><span data-i18n="hero.title">Justice in the Workplace:</span><br><span class="accent" data-i18n="hero.title2">The Philadelphia Case</span></h1>
+                    <p class="subtitle" data-i18n="hero.subtitle">A Modern Inclusion Policy for Tomorrow's Workplace</p>
+                    <p class="authors" data-i18n="hero.authors">Created by: Filippo & Giorgio</p>
+                    <div class="quote">
+                        <p data-i18n="hero.quote">"It's not just about AIDS, is it? It's about the way we've been taught to think about people who are different."</p>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" onclick="switchTab('policy')">
+                            <span data-i18n="hero.cta.policy">Explore Our Policy</span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="switchTab('film')">
+                            <span data-i18n="hero.cta.story">The Story</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Intro Cards -->
+            <section class="intro">
+                <div class="container">
+                    <div class="cards">
+                        <div class="card" onclick="switchTab('film')">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="#38B2AC"><path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/></svg>
+                            </div>
+                            <h3 data-i18n="intro.card1.title">The Story</h3>
+                            <p data-i18n="intro.card1.desc">Analyzing the groundbreaking 1993 film that changed workplace discrimination forever.</p>
+                        </div>
+                        <div class="card" onclick="switchTab('legal')">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="#D69E2E"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                            </div>
+                            <h3 data-i18n="intro.card2.title">Legal Framework</h3>
+                            <p data-i18n="intro.card2.desc">Understanding ADA, HIPAA, and GDPR protections in modern workplaces.</p>
+                        </div>
+                        <div class="card" onclick="switchTab('policy')">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="#1B3A5F"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/></svg>
+                            </div>
+                            <h3 data-i18n="intro.card3.title">Our Commitment</h3>
+                            <p data-i18n="intro.card3.desc">A comprehensive anti-discrimination policy for the future of work.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- FILM PAGE -->
+        <div class="page" data-page="film">
+            <div class="container">
+                <div class="page-header">
+                    <span class="badge" data-i18n="film.badge">Phase 1</span>
+                    <h1 data-i18n="film.title">Understanding the Story</h1>
+                    <p data-i18n="film.subtitle">The groundbreaking film that exposed workplace discrimination</p>
+                </div>
+                
+                <!-- Film Hero -->
+                <div class="film-hero">
+                    <div class="film-poster">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNDc1NjQ1NDYtNDQ2Ny00MTQxLWJjYzktDhkYTZkMmI5ZWYxXkEyXkFqcGc@._V1_.jpg" alt="Philadelphia Movie Poster">
+                    </div>
+                    <div class="film-info">
+                        <h2 data-i18n="film.movie.title">Philadelphia (1993)</h2>
+                        <span class="director" data-i18n="film.movie.director">Directed by Jonathan Demme</span>
+                        <p class="synopsis" data-i18n="film.synopsis">Andrew Beckett (Tom Hanks), a brilliant lawyer at a prestigious Philadelphia firm, is wrongfully terminated after being diagnosed with AIDS. Despite his exceptional performance, he faces discrimination rooted in fear and stigma. He struggles to find legal representation until he meets Joe Miller (Denzel Washington), a personal injury lawyer who initially refuses the case due to his own unconscious biases.</p>
+                        
+                        <!-- Cast -->
+                        <div class="cast">
+                            <h4 data-i18n="film.cast.title">Main Cast</h4>
+                            <div class="cast-grid">
+                                <div class="cast-member">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Tom_Hanks_TIFF_2019.jpg/440px-Tom_Hanks_TIFF_2019.jpg" alt="Tom Hanks">
+                                    <div>
+                                        <strong data-i18n="film.cast.andrew">Tom Hanks</strong>
+                                        <span>as Andrew Beckett</span>
+                                    </div>
+                                </div>
+                                <div class="cast-member">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Denzel_Washington_2018.jpg/440px-Denzel_Washington_2018.jpg" alt="Denzel Washington">
+                                    <div>
+                                        <strong data-i18n="film.cast.joe">Denzel Washington</strong>
+                                        <span>as Joe Miller</span>
+                                    </div>
+                                </div>
+                                <div class="cast-member">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Jason_Robards_1969.jpg/400px-Jason_Robards_1969.jpg" alt="Jason Robards">
+                                    <div>
+                                        <strong data-i18n="film.cast.charles">Jason Robards</strong>
+                                        <span>as Charles Wheeler</span>
+                                    </div>
+                                </div>
+                                <div class="cast-member">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Mary_Steenburgen_2019.jpg/440px-Mary_Steenburgen_2019.jpg" alt="Mary Steenburgen">
+                                    <div>
+                                        <strong data-i18n="film.cast.belinda">Mary Steenburgen</strong>
+                                        <span>as Belinda Conine</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tags -->
+                        <div class="tags">
+                            <span class="tag" data-i18n="tag.wrongful">Wrongful Termination</span>
+                            <span class="tag" data-i18n="tag.hiv">HIV/AIDS Stigma</span>
+                            <span class="tag" data-i18n="tag.civil">Civil Rights</span>
+                            <span class="tag" data-i18n="tag.lgbtq">LGBTQ+ Discrimination</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Keywords -->
+                <div class="keywords">
+                    <h2 data-i18n="keywords.title">Key Concepts from the Film</h2>
+                    <div class="keywords-grid">
+                        <div class="keyword">
+                            <h3 data-i18n="keyword1.title">Wrongful Termination</h3>
+                            <p data-i18n="keyword1.desc">Illegal dismissal based on discrimination rather than job performance.</p>
+                        </div>
+                        <div class="keyword">
+                            <h3 data-i18n="keyword2.title">Defamation</h3>
+                            <p data-i18n="keyword2.desc">False statements damaging reputation.</p>
+                        </div>
+                        <div class="keyword">
+                            <h3 data-i18n="keyword3.title">Social Stigma</h3>
+                            <p data-i18n="keyword3.desc">Societal disapproval based on characteristics like illness or orientation.</p>
+                        </div>
+                        <div class="keyword">
+                            <h3 data-i18n="keyword4.title">Due Process</h3>
+                            <p data-i18n="keyword4.desc">Fair legal procedures and the right to defend oneself.</p>
+                        </div>
+                        <div class="keyword">
+                            <h3 data-i18n="keyword5.title">Appearance vs Performance</h3>
+                            <p data-i18n="keyword5.desc">Discrimination based on appearance, not ability.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Accordion -->
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span data-i18n="accordion.q1">The Conflict: When is Andrew discriminated against?</span>
+                            <span class="icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p data-i18n="accordion.a1">The discrimination occurs at multiple levels. Initially, it's subtle - partners avoid shaking his hand, exclude him from meetings. The explicit discrimination happens when he's fired after visible AIDS lesions appear. While the firm claims incompetence, evidence shows it's actually about both his illness AND perceived lifestyle.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span data-i18n="accordion.q2">The Mirror Scene: Why does Joe Miller first refuse?</span>
+                            <span class="icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p data-i18n="accordion.a2">In the powerful 'mirror scene', Joe Miller meets Andrew in a law library. When Andrew reveals his AIDS diagnosis, Joe visibly recoils and makes excuses to leave. This demonstrates unconscious bias - Joe considers himself progressive, yet he harbors deep-seated fears. His refusal isn't based on legal merit but on personal prejudice he hasn't acknowledged.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LEGAL PAGE -->
+        <div class="page" data-page="legal">
+            <div class="container">
+                <div class="page-header">
+                    <span class="badge" data-i18n="legal.badge">Phase 2</span>
+                    <h1 data-i18n="legal.title">Legal Framework & Research</h1>
+                    <p data-i18n="legal.subtitle">Understanding the laws that protect workplace rights</p>
+                </div>
+                
+                <!-- ADA Card -->
+                <div class="legal-card">
+                    <div class="legal-header">
+                        <h2 data-i18n="legal.ada.title">The Americans with Disabilities Act (ADA) - 1990</h2>
+                        <p data-i18n="legal.ada.subtitle">A landmark civil rights law that changed everything</p>
+                    </div>
+                    <div class="legal-body">
+                        <div class="intro-box">
+                            <p data-i18n="legal.ada.intro">The Americans with Disabilities Act (ADA), approved in 1990, is a fundamental civil rights law in the United States.</p>
+                        </div>
+                        
+                        <!-- Timeline -->
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="year">1990</span>
+                                <span data-i18n="legal.ada.timeline.1990">ADA Signed</span>
+                            </div>
+                            <div class="timeline-line"></div>
+                            <div class="timeline-item">
+                                <span class="year">1993</span>
+                                <span data-i18n="legal.ada.timeline.1993">Film Released</span>
+                            </div>
+                            <div class="timeline-line"></div>
+                            <div class="timeline-item">
+                                <span class="year">2008</span>
+                                <span data-i18n="legal.ada.timeline.2008">Amendments</span>
+                            </div>
+                            <div class="timeline-line"></div>
+                            <div class="timeline-item">
+                                <span class="year">2026</span>
+                                <span data-i18n="legal.ada.timeline.2026">Full Enforcement</span>
+                            </div>
+                        </div>
+                        
+                        <h4 data-i18n="legal.ada.protections">How the ADA Protects Workers Today:</h4>
+                        <ul class="checklist">
+                            <li><span class="check">✓</span> <span data-i18n="legal.ada.protection1">Prohibition of Discrimination in hiring, firing, promotions, and salary.</span></li>
+                            <li><span class="check">✓</span> <span data-i18n="legal.ada.protection2">Fair Treatment - Employers cannot treat a worker unfairly because of a disability.</span></li>
+                            <li><span class="check">✓</span> <span data-i18n="legal.ada.protection3">Reasonable Accommodations - Adapting the workplace so people with disabilities can work effectively.</span></li>
+                            <li><span class="check">✓</span> <span data-i18n="legal.ada.protection4">Medical Confidentiality - Protects the confidentiality of medical information.</span></li>
+                        </ul>
+                        <div class="conclusion">
+                            <p data-i18n="legal.ada.conclusion">In modern workplaces, the ADA ensures that employees are judged based on their abilities.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Privacy Grid -->
+                <div class="privacy-section">
+                    <h2 data-i18n="legal.privacy.title">Health Privacy in the Office</h2>
+                    <div class="privacy-grid">
+                        <div class="privacy-card usa">
+                            <h3 data-i18n="legal.usa.title">United States System</h3>
+                            <h4 data-i18n="legal.usa.subtitle">Limits on Medical Questions:</h4>
+                            <div class="step">
+                                <span class="step-icon lock">🔒</span>
+                                <div><strong data-i18n="legal.usa.step1.title">Before Job Offer</strong><p data-i18n="legal.usa.step1.desc">Employers CANNOT ask medical questions.</p></div>
+                            </div>
+                            <div class="step">
+                                <span class="step-icon warn">⚠️</span>
+                                <div><strong data-i18n="legal.usa.step2.title">After Job Offer</strong><p data-i18n="legal.usa.step2.desc">Only if required for ALL employees.</p></div>
+                            </div>
+                            <div class="step">
+                                <span class="step-icon check">✓</span>
+                                <div><strong data-i18n="legal.usa.step3.title">During Employment</strong><p data-i18n="legal.usa.step3.desc">Only if directly related to job.</p></div>
+                            </div>
+                        </div>
+                        <div class="privacy-card eu">
+                            <h3 data-i18n="legal.eu.title">European Union - GDPR</h3>
+                            <h4 data-i18n="legal.eu.subtitle">General Data Protection Regulation</h4>
+                            <p data-i18n="legal.eu.intro">The GDPR is one of the strongest privacy laws in the world.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Comparison Table -->
+                <div class="comparison-section">
+                    <h2 data-i18n="legal.comparison.title">USA vs EU: Key Differences</h2>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="legal.comparison.col1">Aspect</th>
+                                <th data-i18n="legal.comparison.col2">USA</th>
+                                <th data-i18n="legal.comparison.col3">EU</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Approach</strong></td><td>Sector-based</td><td>Unified law</td></tr>
+                            <tr><td><strong>Main Laws</strong></td><td>HIPAA, ADA</td><td>GDPR</td></tr>
+                            <tr><td><strong>Scope</strong></td><td>Fragmented</td><td>Broad rights</td></tr>
+                            <tr><td><strong>Consent</strong></td><td>Varies</td><td>Required</td></tr>
+                            <tr><td><strong>Rights</strong></td><td>Limited</td><td>Full access</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="final-box">
+                    <p data-i18n="legal.conclusion">In conclusion, while both systems aim to protect individuals, the GDPR provides stronger and more unified protection.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- POLICY PAGE -->
+        <div class="page" data-page="policy">
+            <div class="container">
+                <div class="page-header">
+                    <span class="badge" data-i18n="policy.badge">Phase 3</span>
+                    <h1 data-i18n="policy.title">Anti-Discrimination & Inclusion Policy</h1>
+                    <p data-i18n="policy.subtitle">Building a workplace where everyone belongs</p>
+                </div>
+                
+                <!-- Policy Hero -->
+                <div class="policy-hero">
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc3270958?w=1920&q=80" alt="Diverse workplace">
+                    <div class="policy-hero-content">
+                        <h1 data-i18n="policy.hero.title">Anti-Discrimination & Inclusion Policy 2026</h1>
+                        <p data-i18n="policy.hero.tagline">Est. 1985 - Committed to Change Since 2026</p>
+                    </div>
+                </div>
+                
+                <!-- Mission -->
+                <div class="mission">
+                    <h2 data-i18n="policy.mission.title">Our Commitment</h2>
+                    <p data-i18n="policy.mission.text1">Learning from our past, we commit to building a workplace where every individual is valued for their contributions, not judged for their differences.</p>
+                    <p data-i18n="policy.mission.text2">We acknowledge the mistakes made in cases like Andrew Beckett's, and we take concrete action to ensure such discrimination never happens again.</p>
+                </div>
+                
+                <!-- Policy Sections -->
+                <div class="policy-sections">
+                    <!-- Chronic Illness -->
+                    <div class="policy-section">
+                        <div class="section-header">
+                            <div class="section-icon">🏥</div>
+                            <div>
+                                <h2 data-i18n="policy.chronic.title">Chronic Illness Support</h2>
+                                <span class="subtitle" data-i18n="policy.chronic.subtitle">Your health is private. Your talent is what matters.</span>
+                            </div>
+                        </div>
+                        <div class="section-body">
+                            <div class="subsection">
+                                <h4 data-i18n="policy.chronic.accommodations">Reasonable Accommodations</h4>
+                                <ul>
+                                    <li>Flexible work schedules and remote options</li>
+                                    <li>Modified workspaces</li>
+                                    <li>Additional break time for medical needs</li>
+                                    <li>Leave for medical treatment</li>
+                                </ul>
+                            </div>
+                            <div class="subsection">
+                                <h4 data-i18n="policy.chronic.privacy">Medical Privacy</h4>
+                                <ul>
+                                    <li>Kept strictly confidential</li>
+                                    <li>Shared only on need-to-know basis</li>
+                                    <li>Protected under HIPAA and ADA</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- LGBTQ+ -->
+                    <div class="policy-section">
+                        <div class="section-header">
+                            <div class="section-icon">🏳️🌈</div>
+                            <div>
+                                <h2 class="lgbtq" data-i18n="policy.lgbtq.title">LGBTQ+ Rights & Inclusion</h2>
+                                <span class="subtitle" data-i18n="policy.lgbtq.subtitle">Pride in who you are. Equality in everything we do.</span>
+                            </div>
+                        </div>
+                        <div class="section-body">
+                            <div class="subsection">
+                                <h4 data-i18n="policy.lgbtq.protections">Explicit Protections</h4>
+                                <p class="note" data-i18n="policy.lgbtq.protections.note">Discrimination based on sexual orientation, gender identity is strictly prohibited.</p>
+                            </div>
+                            <div class="subsection">
+                                <h4 data-i18n="policy.lgbtq.benefits">Inclusive Benefits</h4>
+                                <ul>
+                                    <li>Equal spousal and partner benefits</li>
+                                    <li>Transgender-inclusive healthcare</li>
+                                    <li>Parental leave for all parents</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Training -->
+                    <div class="policy-section">
+                        <div class="section-header">
+                            <div class="section-icon">🎓</div>
+                            <div>
+                                <h2 data-i18n="policy.training.title">Diversity Training Program</h2>
+                                <span class="subtitle" data-i18n="policy.training.subtitle">Education is the foundation of change.</span>
+                            </div>
+                        </div>
+                        <div class="section-body">
+                            <div class="subsection">
+                                <h4 data-i18n="policy.training.module1.title">Module 1: Understanding Unconscious Bias</h4>
+                                <p data-i18n="policy.training.module1.content">What is unconscious bias and how does it affect decisions?</p>
+                            </div>
+                            <div class="highlight">
+                                <h4 data-i18n="policy.training.ongoing">ONGOING INITIATIVES</h4>
+                                <ul>
+                                    <li>📚 Monthly Diversity Lunch & Learn</li>
+                                    <li>🤝 Mentorship Program</li>
+                                    <li>📊 Annual Climate Survey</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Download -->
+                <div class="download">
+                    <button class="btn btn-primary"><span data-i18n="policy.download">Download Full Policy PDF</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- REFLECTION PAGE -->
+        <div class="page" data-page="reflection">
+            <div class="container">
+                <div class="page-header">
+                    <span class="badge" data-i18n="reflection.badge">Beyond the Film</span>
+                    <h1 data-i18n="reflection.title">Beyond Philadelphia: Universal Human Rights</h1>
+                    <p data-i18n="reflection.subtitle">Reflecting on progress and ongoing challenges</p>
+                </div>
+                
+                <!-- Timeline Comparison -->
+                <h2 data-i18n="reflection.timeline.title">Stigma: 1993 → 2026</h2>
+                <div class="timeline-comp">
+                    <div class="timeline-col past">
+                        <h3>📼 <span data-i18n="reflection.past.title">When Philadelphia Was Released</span></h3>
+                        <h4 data-i18n="reflection.past.subtitle">HIV/AIDS Stigma:</h4>
+                        <ul>
+                            <li>Poorly understood by public</li>
+                            <li>Transmitted through casual contact (belief)</li>
+                            <li>"Double stigma" with gay community</li>
+                            <li>Limited life expectancy</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-col present">
+                        <h3>💻 <span data-i18n="reflection.present.title">Today's Challenges</span></h3>
+                        <h4 data-i18n="reflection.present.subtitle">Modern Stigmas:</h4>
+                        <ul>
+                            <li><strong>Mental Health:</strong> Seen as "weakness"</li>
+                            <li><strong>Neurodiversity:</strong> Misunderstood</li>
+                            <li><strong>Chronic Pain:</strong> Dismissed</li>
+                            <li><strong>Addiction:</strong> Moral failing</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- What Changed -->
+                <div class="changed-section">
+                    <h3 data-i18n="reflection.changed.title">What Has Changed?</h3>
+                    <div class="cols">
+                        <div class="col not-changed">
+                            <h4>✗ What Hasn't Changed</h4>
+                            <ul>
+                                <li>Fear of the unknown</li>
+                                <li>Judging by appearance</li>
+                                <li>"Othering" different people</li>
+                            </ul>
+                        </div>
+                        <div class="col changed">
+                            <h4>✓ What HAS Changed</h4>
+                            <ul>
+                                <li>Legal protections stronger</li>
+                                <li>Scientific understanding improved</li>
+                                <li>Greater youth acceptance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Who Deserves Rights -->
+                <div class="innocent-section">
+                    <h2 data-i18n="reflection.innocent.title">Who Deserves Rights?</h2>
+                    <div class="innocent-grid">
+                        <div class="innocent-box easy">
+                            <h4 data-i18n="reflection.innocent.easy.title">Andrew's "Advantages"</h4>
+                            <p data-i18n="reflection.innocent.easy.desc">Easy to defend because:</p>
+                            <ul>
+                                <li>Highly educated</li>
+                                <li>Professional</li>
+                                <li>Sympathetic</li>
+                            </ul>
+                        </div>
+                        <div class="innocent-box hard">
+                            <h4 data-i18n="reflection.innocent.hard.title">The Hard Questions</h4>
+                            <p data-i18n="reflection.innocent.hard.desc">But what if...</p>
+                            <ul>
+                                <li>Less educated?</li>
+                                <li>Criminal record?</li>
+                                <li>"Difficult"?</li>
+                            </ul>
+                        </div>
+                        <div class="innocent-box truth">
+                            <h4 data-i18n="reflection.innocent.truth.title">The Hard Truth</h4>
+                            <p data-i18n="reflection.innocent.truth.text1">Human rights are UNIVERSAL.</p>
+                            <p data-i18n="reflection.innocent.truth.text2">We defend ALL people, especially the marginalized.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Final Quote -->
+                <div class="final-quote">
+                    <p data-i18n="reflection.quote">Justice is not selective.<br>Equality is not earned through perfection.<br>Dignity is not reserved for the likeable.</p>
+                </div>
+                
+                <div class="back-home">
+                    <button class="btn btn-primary" onclick="switchTab('home')" data-i18n="reflection.backhome">Back to Home</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOURCES PAGE -->
+        <div class="page" data-page="sources">
+            <div class="container">
+                <div class="page-header">
+                    <span class="badge" data-i18n="sources.badge">References</span>
+                    <h1 data-i18n="sources.title">Sources & Credits</h1>
+                    <p data-i18n="sources.subtitle">Academic integrity and attribution</p>
+                </div>
+                
+                <div class="intro-box">
+                    <p data-i18n="sources.intro">All sources were consulted between January and April 2026. This project is for educational purposes only.</p>
+                </div>
+                
+                <div class="sources-grid">
+                    <div class="source">
+                        <h3>🎬 <span data-i18n="sources.film.title">Film Source</span></h3>
+                        <ul>
+                            <li><strong>Philadelphia (1993)</strong></li>
+                            <li>Director: Jonathan Demme</li>
+                            <li>Runtime: 123 min</li>
+                            <li>Cast: Tom Hanks, Denzel Washington</li>
+                        </ul>
+                    </div>
+                    <div class="source">
+                        <h3>⚖️ <span data-i18n="sources.legal.title">Legal Research</span></h3>
+                        <ul>
+                            <li><strong>ADA:</strong> ADA.gov, EEOC</li>
+                            <li><strong>Privacy:</strong> HIPAA, GDPR</li>
+                            <li><strong>LGBTQ+:</strong> HRC.org</li>
+                            <li><strong>Employment:</strong> SHRM</li>
+                        </ul>
+                    </div>
+                    <div class="source">
+                        <h3>📚 <span data-i18n="sources.academic.title">Academic Sources</span></h3>
+                        <ul>
+                            <li>Harvard Law Review</li>
+                            <li>Journal of Business Ethics</li>
+                            <li>SHRM Research</li>
+                            <li>APA Publications</li>
+                        </ul>
+                    </div>
+                    <div class="source">
+                        <h3>👥 <span data-i18n="sources.authors.title">Project Authors</span></h3>
+                        <ul>
+                            <li data-i18n="sources.authors.filippo">Filippo - Research, Legal Analysis</li>
+                            <li data-i18n="sources.authors.giorgio">Giorgio - Design, Development</li>
+                            <li data-i18n="sources.authors.course">Course: Civic Education</li>
+                            <li data-i18n="sources.authors.date">Date: April 2026</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ack">
+                    <h3 data-i18n="sources.ack.title">Acknowledgment</h3>
+                    <p data-i18n="sources.ack.text1">This project represents our commitment to understanding and promoting workplace equality.</p>
+                    <p data-i18n="sources.ack.text2">We dedicate this work to all those who have faced discrimination in the workplace.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- TAB BAR -->
+    <nav class="tab-bar">
+        <button class="tab-btn active" data-tab="home">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span data-i18n="nav.home">Home</span>
+        </button>
+        <button class="tab-btn" data-tab="film">
+            <svg viewBox="0 0 24 24"><path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/></svg>
+            <span data-i18n="nav.film">Film</span>
+        </button>
+        <button class="tab-btn" data-tab="legal">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            <span data-i18n="nav.legal">Legal</span>
+        </button>
+        <button class="tab-btn" data-tab="policy">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/></svg>
+            <span data-i18n="nav.policy">Policy</span>
+        </button>
+        <button class="tab-btn" data-tab="reflection">
+            <svg viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"/></svg>
+            <span data-i18n="nav.reflection">Reflection</span>
+        </button>
+        <button class="tab-btn" data-tab="sources">
+            <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
+            <span data-i18n="nav.sources">Sources</span>
+        </button>
+    </nav>
+
+    <!-- FOOTER -->
+    <footer>
+        <p data-i18n="footer.copy">© 2026 Civic Education Project - Filippo & Giorgio</p>
+    </footer>
+</body>
+</html>
