@@ -392,12 +392,12 @@ button { cursor: pointer; border: none; font-family: inherit; }
 
 .intro-header h2 {
     font-size: 24px;
-    color: var(--primary);
+    color: var(--white);
     margin-bottom: 8px;
 }
 
 .intro-header p {
-    color: var(--secondary);
+    color: rgba(255,255,255,0.85);
     font-size: 14px;
 }
 
